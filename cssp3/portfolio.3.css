@@ -103,7 +103,7 @@ h2 {
 /* Skills Section */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns */
   gap: 10px;
 }
 
@@ -113,7 +113,21 @@ h2 {
   border-radius: 10px;
   font-weight: 600;
   color: #333;
+  text-align: center;
 }
+
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr); /* Responsive design for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr; /* Responsive design for mobile devices */
+  }
+}
+
 
 /* Projects Section */
 .project {
